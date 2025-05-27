@@ -11,7 +11,7 @@ import javax.persistence.*;
 public class Itens extends AbstractEntidade {
 
 
-    @OneToOne(optional = false)
+    @ManyToOne(optional = false)
     @JoinColumn(name = "produto_id")
     private Produto produto;
 

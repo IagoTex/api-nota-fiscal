@@ -16,6 +16,7 @@ public class NotaService extends AbstractService<Nota, Integer, NotaRepository> 
 
     @Autowired
     private ItensService itensService;
+
     public NotaService(NotaRepository repository) {
         super(repository);
     }
@@ -45,6 +46,30 @@ public class NotaService extends AbstractService<Nota, Integer, NotaRepository> 
 
         notaSalva.setValorTotal(calculaValorTotal(notaSalva));
         repository.save(notaSalva);
+
+        return notaSalva;
+    }
+
+    @Override
+    public Nota update(Integer id, Nota entity) {
+        Nota notaSalva = repository.findById(id).get();
+
+        notaSalva.setId(id);
+        notaSalva.setData(entity.getData());
+        notaSalva.setCliente(entity.getCliente());
+
+        notaSalva = repository.save(notaSalva);
+
+        notaSalva.getItens().clear();
+        for(Itens item : entity.getItens()) {
+            item.setNota(notaSalva);
+            item.setOrdem(entity.getItens().indexOf(item) + 1);
+            notaSalva.getItens().add(item);
+            itensService.save(item);
+
+        }
+
+        notaSalva.setValorTotal(calculaValorTotal(notaSalva));
 
         return notaSalva;
     }
