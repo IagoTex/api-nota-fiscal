@@ -1,0 +1,25 @@
+.formulario-container{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--thierd-color);
+  color: var(--second-color);
+  width: 50rem;
+  height: 30rem;
+  border-radius: 1rem;
+}
+.header-formulario{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 2px var(--second-color);
+}
+
+.corpo-formulário{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 10px;
+}

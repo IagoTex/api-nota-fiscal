@@ -1,0 +1,40 @@
+
+.card-container{
+  background-color: var(--thierd-color);
+  color: var(--second-color);
+  font-size: 1.4rem;
+  width: 20rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.navigation-container li{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 2rem;
+  gap: 20px;
+}
+
+.navigation-container li:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.navigation-container li span{
+  transform: scale(2.0);
+  color: var(--thierd-color);
+}
+
+.container-home{
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+  justify-content: center;
+  align-items: center;
+}
+.body-container{
+  margin-top: 250px;
+}
+

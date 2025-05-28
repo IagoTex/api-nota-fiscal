@@ -1,0 +1,25 @@
+.container-componente{
+  display: flex;
+  flex-direction: column;
+}
+
+.label{
+  font-weight: bold;
+}
+
+.container-input{
+  width: 30rem;
+  border-bottom: 2px solid var(--forti-color);
+}
+.container-input input{
+  background-color: transparent;
+  text-decoration: none;
+  border: none;
+  width: 10rem;
+  width: 100%;
+  outline: none;
+  color: var(--forti-color);
+  font-size: 1.2rem;
+}
+
+
