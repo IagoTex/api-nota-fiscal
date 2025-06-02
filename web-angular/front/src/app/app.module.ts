@@ -8,6 +8,10 @@ import {HeaderComponent} from "./header/header.component";
 import {FormularioBaseComponent} from "./formulario-base-component/formulario.base.component";
 import {ClienteCrudComponent} from "./cliente-crud/cliente.crud.component";
 import {InputReutilizavelComponent} from "./commons/input-reutilizavel-component/input.reutilizavel.component";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {HeaderCrudComponent} from "./commons/header-crud-component/header.crud.component";
+import {BarraPesquisaComponent} from "./commons/barra-pesquisa-component/barra.pesquisa.component";
 
 @NgModule({
   declarations: [
@@ -16,11 +20,16 @@ import {InputReutilizavelComponent} from "./commons/input-reutilizavel-component
     HeaderComponent,
     FormularioBaseComponent,
     ClienteCrudComponent,
-    InputReutilizavelComponent
+    InputReutilizavelComponent,
+    HeaderCrudComponent,
+    BarraPesquisaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

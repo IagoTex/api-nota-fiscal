@@ -1,6 +1,11 @@
 
-<formulario-base [nomeFormulario]="'Cliente'" [tipoFormulario]="'Cadastro'">
-  <div body>
-    <input-reutilizavel tipoInput="text" label="Nome" ></input-reutilizavel>
+<formulario-base [nomeFormulario]="'Cliente'" (detectcaoMenu)="mudaMenu($event)"  >
+  <div class="corpo-formulario" body>
+    <div *ngIf="tipoMenu == 'listar' || tipoMenu == 'atualizar' || tipoMenu == 'deletar'" ><barra-pesquisa></barra-pesquisa></div>
+    <input-reutilizavel [name]="'nomeCliente'"  [tipoInput]="'text'" [(value)]="cliente.nomeCliente"  [label]="'Nome'" ></input-reutilizavel>
+    <input-reutilizavel [name]="'codCliente'"  [tipoInput]="'text'" [(value)]="cliente.codCliente"  [label]="'Código'" ></input-reutilizavel>
+  </div>
+  <div footer>
+    <button class="btn-submit" (click)="create()" >Clique</button>
   </div>
 </formulario-base>

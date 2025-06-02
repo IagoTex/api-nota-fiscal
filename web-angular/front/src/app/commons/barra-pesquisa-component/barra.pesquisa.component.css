@@ -1,0 +1,14 @@
+.container-barra-pesquisa{
+  border-bottom: 2px solid var(--forti-color);
+  margin-bottom: 30px;
+
+}
+
+.container-barra-pesquisa input{
+  background-color: transparent;
+  width: 30rem;
+  border: none;
+  outline: none;
+  color: var(--forti-color);
+  font-size: 1.2rem;
+}

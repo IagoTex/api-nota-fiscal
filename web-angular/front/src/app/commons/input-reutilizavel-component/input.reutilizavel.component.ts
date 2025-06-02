@@ -1,4 +1,4 @@
-import {Component, Input} from "@angular/core";
+import {Component, EventEmitter, Input, Output} from "@angular/core";
 
 @Component({
   selector: "input-reutilizavel",
@@ -7,8 +7,21 @@ import {Component, Input} from "@angular/core";
 })
 export class InputReutilizavelComponent{
 
-   @Input() tipoInput:String = "text";
-   @Input() label!:String;
+   @Input() tipoInput:string = "text";
+   @Input() label:string;
+   @Input() value:string;
+   @Input() name: string;
+
+   @Output() valueChange = new EventEmitter<string>();
+
+
+   onValueChange(newValue: string){
+     this.value = newValue;
+     console.log(newValue)
+     this.valueChange.emit(newValue);
+
+   }
+
 
 
 }

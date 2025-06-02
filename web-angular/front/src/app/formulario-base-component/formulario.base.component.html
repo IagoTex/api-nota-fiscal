@@ -1,6 +1,8 @@
+<header-crud (mudaMenu)="informaMenu($event)"></header-crud>
+
 <div class="formulario-container">
   <div class="header-formulario">
-    <h1>Formulário de {{tipoFormulario}} de {{nomeFormulario}}</h1>
+    <h1>Formulário de {{tipoFormulario}} {{nomeFormulario}}</h1>
   </div>
 
   <div class="corpo-formulário">
@@ -8,5 +10,7 @@
 
   </div>
 
-
+  <div class="footer-formulario">
+    <ng-content select="[footer]" ></ng-content>
+  </div>
 </div>

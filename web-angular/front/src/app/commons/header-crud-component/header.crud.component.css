@@ -1,0 +1,33 @@
+.container-heaer{
+  background-color: var(--thierd-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 1.2rem;
+  margin-bottom: 50px;
+}
+
+
+.container-list{
+
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.container-list li{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--second-color);
+}
+
+.container-list li:hover{
+  cursor: pointer;
+  color: var(--forti-color);
+}
+
+.container-list li.active{
+  color: var(--primary-color);
+}

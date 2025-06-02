@@ -1,0 +1,21 @@
+.corpo-formulario{
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+.btn-submit{
+  padding: 20px;
+  border: none;
+  font-weight: bold;
+  color: var(--thierd-color);
+  background-color: var(--forti-color);
+  border-radius: 0.5rem;
+
+}
+
+.btn-submit:hover{
+  color: var(--second-color);
+  background-color: var(--primary-color);
+  cursor: pointer;
+
+}

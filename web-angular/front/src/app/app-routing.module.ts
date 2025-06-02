@@ -6,8 +6,7 @@ import {ClienteCrudComponent} from "./cliente-crud/cliente.crud.component";
 
 const routes: Routes = [
 
-  {path: '', component: FormularioBaseComponent},
-  {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent},
   {path: 'cliente', component: ClienteCrudComponent}
 ];
 

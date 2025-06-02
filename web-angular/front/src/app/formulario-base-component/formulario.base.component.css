@@ -4,7 +4,7 @@
   background-color: var(--thierd-color);
   color: var(--second-color);
   width: 50rem;
-  height: 30rem;
+  height: auto;
   border-radius: 1rem;
 }
 .header-formulario{
@@ -20,6 +20,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: auto;
   padding: 2rem;
   gap: 10px;
+}
+
+.footer-formulario{
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
