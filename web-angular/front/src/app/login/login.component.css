@@ -1,0 +1,49 @@
+.login-container{
+  background-color: var(--thierd-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: 10rem;
+}
+.login-header{
+  color: var(--second-color);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-body{
+  color: var(--second-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.login-footer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-footer button{
+  padding: 20px;
+  border: none;
+  font-weight: bold;
+  color: var(--thierd-color);
+  background-color: var(--forti-color);
+  border-radius: 0.5rem;
+}
+.login-footer button:hover{
+  color: var(--second-color);
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.link{
+  color: var(--forti-color);
+}
+
+.link:hover{
+  color: #0000FF;
+  cursor: pointer;
+}

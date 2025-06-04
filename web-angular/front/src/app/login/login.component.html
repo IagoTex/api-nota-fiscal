@@ -1,0 +1,16 @@
+<div class="login-container">
+  <header *ngIf="temCadastro == true" class="login-header"> <h1>Login</h1> </header>
+  <header *ngIf="temCadastro == false" class="login-header"> <h1>Cadastro</h1> </header>
+  <div class="login-body" >
+    <input-reutilizavel [label]="'E-mail'" [(value)]="user.email"></input-reutilizavel>
+    <input-reutilizavel [label]="'Senha'"  [(value)]="user.password" [tipoInput]="'password'" ></input-reutilizavel>
+
+    <div  *ngIf="temCadastro == true" class="login-footer" ><button (click)="onSubmit()" >Entrar</button></div>
+    <div  *ngIf="temCadastro == false" class="login-footer" ><button (click)="onSubmit()" >Cadastrar</button></div>
+
+    <div class="login-footer">
+      <p *ngIf="temCadastro == true" class="link" (click)="mudarParaCadastro()" >Não possui login? Cadastre-se</p>
+      <p *ngIf="temCadastro == false" class="link" (click)="mudarParaCadastro()" >Voltar para a tela de Login</p>
+    </div>
+  </div>
+</div>

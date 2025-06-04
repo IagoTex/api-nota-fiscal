@@ -17,7 +17,6 @@ export class InputReutilizavelComponent{
 
    onValueChange(newValue: string){
      this.value = newValue;
-     console.log(newValue)
      this.valueChange.emit(newValue);
 
    }

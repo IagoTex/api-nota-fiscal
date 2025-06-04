@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {FormularioBaseComponent} from "./formulario-base-component/formulario.base.component";
 import {HomeComponent} from "./home/home";
-import {ClienteCrudComponent} from "./cliente-crud/cliente.crud.component";
+import {LoginComponent} from "./login/login.component";
 
 const routes: Routes = [
 
-  {path: '', component: HomeComponent},
-  {path: 'cliente', component: ClienteCrudComponent}
+  {path: '', component: LoginComponent},
+  {path: 'home', component: HomeComponent}
 ];
 
 @NgModule({

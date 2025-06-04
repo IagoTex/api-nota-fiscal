@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/cliente")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin("http://localhost:4200")
 public class ClienteResource extends AbstractResource<Cliente, Integer, ClienteService> {
 
     public ClienteResource(ClienteService service) {

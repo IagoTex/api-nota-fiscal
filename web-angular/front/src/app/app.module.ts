@@ -5,31 +5,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HomeComponent} from "./home/home";
 import {HeaderComponent} from "./header/header.component";
-import {FormularioBaseComponent} from "./formulario-base-component/formulario.base.component";
-import {ClienteCrudComponent} from "./cliente-crud/cliente.crud.component";
-import {InputReutilizavelComponent} from "./commons/input-reutilizavel-component/input.reutilizavel.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-import {HeaderCrudComponent} from "./commons/header-crud-component/header.crud.component";
-import {BarraPesquisaComponent} from "./commons/barra-pesquisa-component/barra.pesquisa.component";
+import {ClienteModule} from "./cliente/cliente.module";
+import {SharedModule} from "./commons/shared.module";
+import {ClienteRoutingModule} from "./cliente/cliente.routing.module";
+import {LoginComponent} from "./login/login.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FormularioBaseComponent,
-    ClienteCrudComponent,
-    InputReutilizavelComponent,
-    HeaderCrudComponent,
-    BarraPesquisaComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    ClienteModule,
+    SharedModule,
+    HttpClientModule,
+    ClienteRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

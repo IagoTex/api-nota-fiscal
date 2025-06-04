@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
-import {Cliente} from "../model/cliente";
+import {Cliente} from "../../model/cliente";
 import {FormControl, Validators} from "@angular/forms";
-import {ClienteService} from "../services/cliente.service";
+import {ClienteService} from "../../services/cliente.service";
 
 @Component({
   selector: "cliente-crud",
