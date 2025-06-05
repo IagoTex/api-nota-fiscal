@@ -1,8 +1,8 @@
 import {AbstractEntity} from "../abstractEntity";
 
-export class Usuario extends AbstractEntity{
+export class AuthRequest extends AbstractEntity{
 
-  email:string;
+  username:string;
   password:string;
 
 }

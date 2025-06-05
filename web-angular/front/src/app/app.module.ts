@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import {HomeComponent} from "./home/home";
 import {HeaderComponent} from "./header/header.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {ClienteModule} from "./cliente/cliente.module";
 import {SharedModule} from "./commons/shared.module";
 import {ClienteRoutingModule} from "./cliente/cliente.routing.module";
 import {LoginComponent} from "./login/login.component";
+import {JwtInterceptorService} from "./services/security/jwt.interceptor.service";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,11 @@ import {LoginComponent} from "./login/login.component";
     HttpClientModule,
     ClienteRoutingModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: JwtInterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

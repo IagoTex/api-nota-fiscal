@@ -3,6 +3,6 @@
   {{label}}:
 </div>
 <div class="container-input">
-  <input  [ngModel]="value" (ngModelChange)="onValueChange($event)"  maxlength="50" type="{{tipoInput}}">
+  <input  [ngModel]="value" [formControl]="control" (ngModelChange)="onValueChange($event)" maxlength="50" type="{{tipoInput}}">
 </div>
 </div>
