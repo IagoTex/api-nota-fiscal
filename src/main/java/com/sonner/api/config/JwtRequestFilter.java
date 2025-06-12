@@ -1,5 +1,6 @@
 package com.sonner.api.config;
 
+import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,6 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.security.SignatureException;
 
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {
@@ -34,7 +36,14 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
             jwtToken = authorizationHeader.substring(7);
-            username = jwtUtil.extractUsername(jwtToken);
+            try{
+                username = jwtUtil.extractUsername(jwtToken);
+            }catch (ExpiredJwtException e){
+                logger.warn("JWT token expired");
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+
         }
 
         if(username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
